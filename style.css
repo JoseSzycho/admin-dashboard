@@ -1,0 +1,89 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar content-container";
+}
+
+.grid-container>.header{
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.grid-container>.sidebar{
+    background-color: #389bf8;
+    grid-area: sidebar; 
+}
+
+.sidebar .sidebar-logo{
+    font-size: 2rem;
+    color: white;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar img{
+    filter: invert(100%);
+}
+
+.sidebar .primary-links{
+    margin-bottom: 4rem;
+}
+
+
+.sidebar li{
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 0.4rem;
+}
+
+.sidebar img{
+    width: 2rem;
+    height: 2rem;
+}
+
+.sidebar .primary-links p, .sidebar .secondary-links p{
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    margin: 0;
+}
+
+.grid-container .content-container{
+    background-color: #f4f4f5;
+    grid-area: content-container;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+    "projects announcements"
+    "projects trending";
+    padding: 1rem;
+}
+
+.content-container .projects{
+    grid-area: projects;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1rem;  
+}
+
+.card{
+    background-color: pink;
+}
+
+.content-container>.announcements{
+    grid-area: announcements;
+}
+
+.content-container>.trending{
+    grid-area: trending;
+}
